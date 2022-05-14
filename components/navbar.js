@@ -16,19 +16,19 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from "@chakra-ui/icons"
 import { useLang } from '../lib/langContext'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.500', 'whiteAlpha.900')
 
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
         p={2}
         bg={active ? 'glassTiel' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        color={active ? '#666666' : inactiveColor}
         target={target}
         {...props}
       >
@@ -40,7 +40,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 
 const Navbar = props => {
   const { path } = props
-  const { lang, setLang } = useLang()
+  const { lang } = useLang()
 
   return (
     <Box
@@ -72,15 +72,16 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}>
           <LinkItem href='/works' path={path}>
-            Works
+            {lang ? 'Works' : "Проєкти"}
           </LinkItem>
           <LinkItem href='/posts' path={path}>
-            Posts
+            {lang ? 'Posts' : "Пости"}
           </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
           <ThemeToggle />
+          <LangToggle />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id='navbar-menu'>
               <MenuButton
@@ -91,13 +92,13 @@ const Navbar = props => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>{lang ? "About" : "Про мене"}</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem as={Link}>{lang ? "Works" : "Проєкти"}</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                  <MenuItem as={Link}>{lang ? "Posts" : "Пости"}</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

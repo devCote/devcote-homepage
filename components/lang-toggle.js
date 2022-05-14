@@ -10,19 +10,23 @@ export const LangToggle = () => {
     <AnimatePresence exitBeforeEnter initial={false}>
       <motion.div
         style={{ display: 'inline-block' }}
-        key={useColorModeValue('light', 'dark')}
+        key={lang}
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.2 }}
       >
         <IconButton
           aria-label="Toggle Language"
-          variant="outline"
+          ml={2}
+          colorScheme={useColorModeValue('none', 'none')}
+          borderStyle="solid" borderColor={'#555555'} borderWidth={1}
           icon={lang === true ? <UaIcon /> : <EngIcon />}
-          onClick={setLang(!lang)}
+          onClick={() => setLang(!lang)}
         ></IconButton>
       </motion.div>
     </AnimatePresence>
   );
 };
+
+
