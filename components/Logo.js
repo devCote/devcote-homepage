@@ -1,20 +1,23 @@
 import Link from 'next/link'
 import { Text, useColorModeValue } from "@chakra-ui/react"
 import styled from '@emotion/styled'
-import { Gear } from './icons'
+import { CatPaw } from './icons'
 import { useLang } from "../lib/langContext"
+import { motion } from 'framer-motion'
 
 const LogoBox = styled.span`
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   display: inline-flex;
   align-items: center;
   height: 30px;
   line-height: 20px;
   padding: 10px;
-
-  &:hover img {
-    transform: rotate(20deg);
+  #logo {
+    transition: 400ms ease;
+  }
+  &:hover #logo {
+    transform: rotate(-30deg);
   }
 `
 
@@ -25,7 +28,7 @@ const Logo = () => {
     <Link href="/">
       <a>
         <LogoBox>
-          <Gear boxSize={5} mr={'-6px'} fill={'#333'} />
+          <CatPaw id='logo' boxSize={5} mb='2px' mr='-6px' />
           <Text color={useColorModeValue('gray.800', 'whiteAlfa.900')}
             fontFamily='M PLUS Rounded 1c' fontWeight='bold' ml={3}>
             {lang === true ? 'Dmytro Bakhanenko' : 'Дмитро Баханенко'}

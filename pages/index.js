@@ -20,10 +20,10 @@ const Page = () => {
       </Box>
       <Box display={{ md: 'flex' }} mb={{ base: 4, md: 0 }}>
         <Box flexGrow={1} mb={6}>
-          <Heading as='h1' fontSize={66} variant="page-title" fontFamily={theme.fonts.signature}>
+          <Heading as='h1' fontSize={{ base: '46', sm: '66' }} variant="page-title" fontFamily={theme.fonts.signature}>
             Dmytro Bakhanenko
           </Heading>
-          <Text mt={-4} fontWeight='bold' align='right'>
+          <Text mt={{ base: '0', sm: '-4' }} fontWeight='bold' align='right'>
             {lang ? "devCote ( Artist / Designer / Developer )" : "devCote ( Митець / Дизайнер / Програміст )"}
           </Text>
         </Box>
@@ -35,13 +35,17 @@ const Page = () => {
             src='/me.jpeg' alt="profile img" />
         </Box>
       </Box>
-      <Section delay={0.1}>
+      <Section delay={0.2}>
         <Box>
-          <Text>
-            {lang ? 'Wow, the cool kids are already coding at age 7. Meanwhile, I started at age 25. I heard that electronics engineering had programming subjects, so I decided to study it in advance. My first language was C++, and I must say that I quite got the basics of programming. I learned the syntax, operations, looping, conditionals, and little of object-oriented programming.' : "Вау, круті діти вже кодують у віці 7 років. Тим часом я почав у віці 25 років. Я чув, що електроніка техніки має предмети програмування, тому я вирішив вивчити його заздалегідь. Моєю першою мовою був C++, і я повинен сказати, що я цілком отримав основи програмування. Я вивчив синтаксис, операції, петлі, умовні умови та мало об'єктно-орієнтованого програмування."}
-          </Text>
         </Box>
-
+      </Section>
+      <Section delay={0.6} >
+        <Heading as={'h3'} mt={{ base: '-50px', lg: '-20px' }} variant='section-title'>
+          About
+        </Heading>
+        <Text>
+          {lang ? 'Wow, the cool kids are already coding at age 7. Meanwhile, I started at age 25. I heard that electronics engineering had programming subjects, so I decided to study it in advance. My first language was C++, and I must say that I quite got the basics of programming. I learned the syntax, operations, looping, conditionals, and little of object-oriented programming.' : "Вау, круті діти вже кодують у віці 7 років. Тим часом я почав у віці 25 років. Я чув, що електроніка техніки має предмети програмування, тому я вирішив вивчити його заздалегідь. Моєю першою мовою був C++, і я повинен сказати, що я цілком отримав основи програмування. Я вивчив синтаксис, операції, петлі, умовні умови та мало об'єктно-орієнтованого програмування."}
+        </Text>
       </Section>
     </Container >
   )

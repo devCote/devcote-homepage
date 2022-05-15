@@ -9,3 +9,65 @@ export const Gear = props => <Icon viewBox="0 0 1000 1000" {...props}><metadata>
 export const UaIcon = props => <Icon viewBox="0 0 512 512" {...props}><path d="M480 416H32V96H480V416Z" fill="#38A9FB" /><path d="M480 256L480 416L32 416L32 256L480 256Z" fill="#FFE70E" /></Icon>;
 
 export const EngIcon = props => <Icon viewBox="0 0 512 512" {...props}><path d="M32 96H480V416H32V96Z" fill="#2A2FAF" /><path fillRule="evenodd" clipRule="evenodd" d="M34.5957 96L480 406.044V416H465.297L32 114.384V96H34.5957Z" fill="#E92B2B" /><path fillRule="evenodd" clipRule="evenodd" d="M450.793 416L32 124.48V114.384L465.297 416H450.793ZM49.0991 96L480 395.948V406.044L34.5957 96H49.0991Z" fill="#FBFBFB" /><path fillRule="evenodd" clipRule="evenodd" d="M32 406.044V416H46.7031L480 114.384V96H477.404L32 406.044Z" fill="#E92B2B" /><path fillRule="evenodd" clipRule="evenodd" d="M480 124.48V114.384L46.7031 416H61.2066L480 124.48ZM32 395.948V406.044L477.404 96H462.901L32 395.948Z" fill="#FBFBFB" /><path fillRule="evenodd" clipRule="evenodd" d="M57.136 96L480 390.232V410.42L32 98.6986V96H57.136Z" fill="#FBFBFB" /><path fillRule="evenodd" clipRule="evenodd" d="M32 390.232V410.42L480 98.6986V96H454.864L32 390.232Z" fill="#FBFBFB" /><path fillRule="evenodd" clipRule="evenodd" d="M280 96H232V230.737H32V281.263H232V416H280V281.263H480V230.737H280V96Z" fill="#E92B2B" /><path fillRule="evenodd" clipRule="evenodd" d="M32 222.316H224V96H240V230.737V239.158H232H32V222.316ZM224 416V289.684H32V272.842H232H240V281.263V416H224ZM480 289.684H288V416H272V281.263V272.842H280H480V289.684ZM288 96V222.316H480V239.158H280H272V230.737V96H288Z" fill="#FBFBFB" /></Icon>;
+
+export const CatPaw = props => <Icon viewBox="0 0 256 256" {...props}><desc>{"Created with Fabric.js 1.7.22"}</desc><defs /><g transform="translate(128 128) scale(0.72 0.72)" style={{}}><g style={{
+  stroke: "none",
+  strokeWidth: 0,
+  strokeDasharray: "none",
+  strokeLinecap: "butt",
+  strokeLinejoin: "miter",
+  strokeMiterlimit: 10,
+  fill: "none",
+  fillRule: "nonzero",
+  opacity: 1
+}} transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)"><path d="M 63.291 86.184 c -4.532 0 -8.79 -1.868 -11.99 -5.258 c -1.686 -1.788 -3.923 -2.772 -6.3 -2.772 h 0 c -2.377 0 -4.614 0.985 -6.301 2.772 c -3.199 3.39 -7.457 5.258 -11.989 5.258 c -4.533 0 -8.791 -1.868 -11.991 -5.258 c -6.567 -6.961 -6.567 -18.287 0 -25.247 l 9.444 -10.704 c 5.45 -6.176 12.85 -9.578 20.837 -9.578 c 0 0 0 0 0 0 c 7.988 0 15.387 3.402 20.836 9.578 l 9.455 10.717 c 6.554 6.962 6.55 18.278 -0.012 25.234 C 72.081 84.316 67.823 86.184 63.291 86.184 z" style={{
+  stroke: "none",
+  strokeWidth: 1,
+  strokeDasharray: "none",
+  strokeLinecap: "butt",
+  strokeLinejoin: "miter",
+  strokeMiterlimit: 10,
+  fill: "currentcolor",
+  fillRule: "nonzero",
+  opacity: 1
+}} transform=" matrix(1 0 0 1 0 0) " strokeLinecap="round" /><path d="M 32.017 29.027 c -5.059 0 -8.939 -3.475 -10.197 -9.392 c -1.576 -7.413 1.775 -14.428 7.47 -15.638 c 5.696 -1.215 11.609 3.836 13.184 11.248 c 1.461 6.871 -1.649 12.172 -7.922 13.506 C 33.68 28.936 32.833 29.027 32.017 29.027 z" style={{
+  stroke: "none",
+  strokeWidth: 1,
+  strokeDasharray: "none",
+  strokeLinecap: "butt",
+  strokeLinejoin: "miter",
+  strokeMiterlimit: 10,
+  fill: "currentcolor",
+  fillRule: "nonzero",
+  opacity: 1
+}} transform=" matrix(1 0 0 1 0 0) " strokeLinecap="round" /><path d="M 57.984 29.027 c -0.817 0 -1.663 -0.091 -2.535 -0.276 c -6.273 -1.334 -9.383 -6.635 -7.923 -13.506 c 1.576 -7.413 7.491 -12.461 13.185 -11.248 c 5.694 1.21 9.045 8.226 7.47 15.638 C 66.922 25.551 63.042 29.027 57.984 29.027 z" style={{
+  stroke: "none",
+  strokeWidth: 1,
+  strokeDasharray: "none",
+  strokeLinecap: "butt",
+  strokeLinejoin: "miter",
+  strokeMiterlimit: 10,
+  fill: "currentcolor",
+  fillRule: "nonzero",
+  opacity: 1
+}} transform=" matrix(1 0 0 1 0 0) " strokeLinecap="round" /><path d="M 78.62 45.514 c -1.555 0 -3.154 -0.363 -4.698 -1.083 c -2.678 -1.249 -4.642 -3.317 -5.529 -5.824 c -0.961 -2.716 -0.667 -5.87 0.848 -9.118 c 3.203 -6.868 10.1 -10.454 15.377 -7.994 c 5.276 2.46 6.963 10.05 3.76 16.918 v 0 c -1.515 3.249 -3.742 5.5 -6.44 6.51 C 80.883 45.318 79.763 45.514 78.62 45.514 z" style={{
+  stroke: "none",
+  strokeWidth: 1,
+  strokeDasharray: "none",
+  strokeLinecap: "butt",
+  strokeLinejoin: "miter",
+  strokeMiterlimit: 10,
+  fill: "currentcolor",
+  fillRule: "nonzero",
+  opacity: 1
+}} transform=" matrix(1 0 0 1 0 0) " strokeLinecap="round" /><path d="M 11.38 45.514 c -1.143 0 -2.262 -0.196 -3.318 -0.591 c -2.698 -1.01 -4.925 -3.261 -6.44 -6.51 c -3.202 -6.868 -1.516 -14.457 3.76 -16.918 c 5.277 -2.458 12.175 1.126 15.377 7.995 c 1.515 3.249 1.808 6.401 0.847 9.118 c -0.887 2.507 -2.85 4.575 -5.529 5.824 C 14.534 45.151 12.935 45.514 11.38 45.514 z" style={{
+  stroke: "none",
+  strokeWidth: 1,
+  strokeDasharray: "none",
+  strokeLinecap: "butt",
+  strokeLinejoin: "miter",
+  strokeMiterlimit: 10,
+  fill: "currentcolor",
+  fillRule: "nonzero",
+  opacity: 1
+}} transform=" matrix(1 0 0 1 0 0) " strokeLinecap="round" /></g></g></Icon>;
