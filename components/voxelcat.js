@@ -13,7 +13,7 @@ const VoxelCat = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
+  const [target] = useState(new THREE.Vector3(0, 8.2, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
       20 * Math.sin(0.2 * Math.PI),
@@ -51,9 +51,7 @@ const VoxelCat = () => {
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
 
-      // 640 -> 240
-      // 8   -> 6
-      const scale = scH * 0.004 + 0.2
+      const scale = scH * 0.004 + 14
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -66,17 +64,17 @@ const VoxelCat = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
-      scene.add(ambientLight)
-      const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
-scene.add( light );
+      //const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+      //scene.add(ambientLight)
+      const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+      scene.add(light);
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/cat.glb', {
+      loadGLTFModel(scene, '/test.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
@@ -95,7 +93,7 @@ scene.add( light );
           const p = initialCameraPosition
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
-          camera.position.y = 6
+          camera.position.y = 16
           camera.position.x =
             p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
           camera.position.z =

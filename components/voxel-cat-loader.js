@@ -22,6 +22,7 @@ export const CatContainer = forwardRef(({ children }, ref) => (
     w={[280, 480, 640]}
     h={[280, 480, 640]}
     position="relative"
+    zIndex={-10}
   >
     {children}
   </Box>
