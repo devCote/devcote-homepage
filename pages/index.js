@@ -1,22 +1,21 @@
 import { Container, Box, Heading, Text, Image, useColorMode, } from '@chakra-ui/react'
 import Section from '../components/section'
 import { useLang } from '../lib/langContext'
-import { Ireact, Iangular, Ijs, Inext, Iredux, Ihtml, Isass, Ichakra, Ipython, Iaws, Ifirebase, Imysql, Inode, Iredis, Iblender, Iadobe, Iunity, Ipostgress, Itailwind, Ibash, Ilinux, Ikubernetes, Inginx, Ivim } from '../components/icons'
+import { hello, sign, about } from '../lib/text'
+import Icons from '../components/TeachIcons'
 
 
 const Page = () => {
 
   const { lang } = useLang()
   const { colorMode } = useColorMode()
-  const apos = "'"
 
   return (
     <Container>
       <Box borderRadius={"md"}
         bg={colorMode === 'dark' ? '#303030' : '#fbd38d'}
         p={3} mb={6} align="center" mt={'80px'}>
-        {lang ? `Hello! I${apos}m a full-stack developer from Ukraine`
-          : 'Привет! Я веб разработчик из Украины'}
+        {lang ? hello.en : hello.ru}
       </Box>
       <Box display={{ md: 'flex' }} mb={{ base: 4, md: 0 }}>
         <Box flexGrow={1} mb={6}>
@@ -24,7 +23,7 @@ const Page = () => {
             Dmytro Bakhanenko
           </Heading>
           <Text mt={{ base: '0', sm: '-4' }} fontWeight='bold' align='right'>
-            {lang ? "devCote ( Artist / Designer / Developer )" : "devCote ( Художник / Дизайнер / Програмист )"}
+            {lang ? sign.en : sign.ru}
           </Text>
         </Box>
         <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}
@@ -40,17 +39,7 @@ const Page = () => {
           {lang ? 'About' : 'Обо мне'}
         </Heading>
         <Text px={10}>
-          {lang ?
-            `Dmitriy is a freelance and full-stack developer from Kyiv Ukraine with a
-            passion of building apps and services/stuff he likes. He has a stack
-            of all the things for launching products, from planning and designing all the
-            way to solving problems with code. When not online, he loves playing guitar, travelling and
-            studying cyber security tech`
-
-            : `Дмитрий - фрилансер и разработчик полного стека из Киева Украина. Имеет страсть к созданию приложений
-            услуг и вещей, которые ему нравятся. У него есть знания для запуска продуктов, от планирования
-            и проектирования до способов решения проблем с кодом. Когда он не онлайн, он любит играть на гитаре,
-            путешествовать и изучать технологит кибербезопасности`}
+          {lang ? about.en : about.ru}
         </Text>
       </Section>
       <Section delay={0.6} >
@@ -58,28 +47,7 @@ const Page = () => {
           {lang ? 'Tech' : 'Технологии'}
         </Heading>
         <Box align='center'>
-          <Ireact boxSize={12} fill={'currentColor'} m={2} />
-          <Inext boxSize={12} fill={'currentColor'} m={2} />
-          <Iangular boxSize={12} fill={'currentColor'} m={2} />
-          <Iredux boxSize={12} fill={'currentColor'} m={2} />
-          <Ijs boxSize={12} fill={'currentColor'} m={2} />
-          <Ihtml boxSize={12} fill={'currentColor'} m={2} />
-          <Isass boxSize={12} fill={'currentColor'} m={2} />
-          <Itailwind boxSize={12} fill={'currentColor'} m={2} />
-          <Ichakra boxSize={12} fill={'currentColor'} m={2} />
-          <Ipython boxSize={12} fill={'currentColor'} m={2} />
-          <Inginx boxSize={12} fill={'currentColor'} m={2} />
-          <Iaws boxSize={12} fill={'currentColor'} m={2} />
-          <Ifirebase boxSize={12} fill={'currentColor'} m={2} />
-          <Imysql boxSize={12} fill={'currentColor'} m={2} />
-          <Ipostgress boxSize={12} fill={'currentColor'} m={2} />
-          <Iredis boxSize={12} fill={'currentColor'} m={2} />
-          <Inode boxSize={12} fill={'currentColor'} m={2} />
-          <Iblender boxSize={12} fill={'currentColor'} m={2} />
-          <Iunity boxSize={12} fill={'currentColor'} m={2} />
-          <Ibash boxSize={12} fill={'currentColor'} m={2} />
-          <Ilinux boxSize={12} fill={'#333'} m={2} />
-          <Ikubernetes boxSize={12} fill={'currentColor'} m={2} />
+          <Icons />
         </Box>
       </Section>
 
