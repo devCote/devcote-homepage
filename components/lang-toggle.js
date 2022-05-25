@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { IconButton, useColorModeValue } from '@chakra-ui/react'
-import { UaIcon, EngIcon } from './icons'
+import { Box } from '@chakra-ui/react'
 import { useLang } from '../lib/langContext'
 
 export const LangToggle = () => {
@@ -16,16 +15,21 @@ export const LangToggle = () => {
         exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
-        <IconButton
-          aria-label="Toggle Language"
-          ml={2}
-          colorScheme={useColorModeValue('none', 'none')}
-          borderStyle="solid" borderColor={'#555555'} borderWidth={1}
-          icon={lang === true ? <UaIcon /> : <EngIcon />}
+        <Box
           onClick={() => setLang(!lang)}
-        ></IconButton>
+          textAlign='center'
+          w='38px'
+          h='38px'
+          position='relative'
+          outline={'1px solid currentColor'}
+          borderRadius={6}
+          cursor="pointer"
+          fontSize={22}
+          transform='translate(0,2px)'
+          ml={1.5}
+        >{lang ? 'Ru' : 'En'}</Box>
       </motion.div>
-    </AnimatePresence>
+    </AnimatePresence >
   );
 };
 

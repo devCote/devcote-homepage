@@ -3,7 +3,6 @@ import { Text, useColorModeValue } from "@chakra-ui/react"
 import styled from '@emotion/styled'
 import { CatPaw } from './icons'
 import { useLang } from "../lib/langContext"
-import { motion } from 'framer-motion'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -31,7 +30,7 @@ const Logo = () => {
           <CatPaw id='logo' boxSize={5} mb='2px' mr='-6px' />
           <Text color={useColorModeValue('gray.800', 'whiteAlfa.900')}
             fontFamily='M PLUS Rounded 1c' fontWeight='bold' ml={3}>
-            {lang === true ? 'Dmytro Bakhanenko' : 'Дмитро Баханенко'}
+            {lang === true ? 'Dmitry Bakhanenko' : 'Дмитрий Баханенко'}
           </Text>
         </LogoBox>
       </a>

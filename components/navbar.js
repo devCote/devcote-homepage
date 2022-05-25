@@ -72,33 +72,34 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}>
           <LinkItem href='/works' path={path}>
-            {lang ? 'Works' : "Проєкти"}
+            {lang ? 'Works' : "Проекты"}
           </LinkItem>
-          <LinkItem href='/posts' path={path}>
-            {lang ? 'Posts' : "Пости"}
+          <LinkItem href='/studies' path={path}>
+            {lang ? 'Case Studies' : "Учебные материалы"}
           </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
           <ThemeToggle />
           <LangToggle />
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={1.5} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id='navbar-menu'>
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
+                borderColor='currentColor'
                 aria-label="Options"
               />
-              <MenuList>
+              <MenuList backgroundColor='#000'>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>{lang ? "About" : "Про мене"}</MenuItem>
+                  <MenuItem as={Link}>{lang ? "About" : "Домашняя страница"}</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>{lang ? "Works" : "Проєкти"}</MenuItem>
+                  <MenuItem as={Link}>{lang ? "Works" : "Проекты"}</MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>{lang ? "Posts" : "Пости"}</MenuItem>
+                  <MenuItem as={Link}>{lang ? "Posts" : "Учебные материалы"}</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>
