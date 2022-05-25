@@ -14,7 +14,8 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
+  useColorMode
 } from '@chakra-ui/react'
 import { HamburgerIcon } from "@chakra-ui/icons"
 import { useLang } from '../lib/langContext'
@@ -41,6 +42,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 const Navbar = props => {
   const { path } = props
   const { lang } = useLang()
+  const { colorMode } = useColorMode()
 
   return (
     <Box
@@ -91,7 +93,7 @@ const Navbar = props => {
                 borderColor='currentColor'
                 aria-label="Options"
               />
-              <MenuList backgroundColor='#000'>
+              <MenuList backgroundColor={colorMode === 'dark' ? '#18181a' : '#f2eccf'}>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>{lang ? "About" : "Домашняя страница"}</MenuItem>
                 </NextLink>

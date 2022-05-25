@@ -3,6 +3,7 @@ import Navbar from '../navbar.js'
 import { Box, Container } from '@chakra-ui/react'
 import VoxelCatLoader from '../voxel-cat-loader'
 import dynamic from 'next/dynamic'
+import Footer from '../footer'
 
 const LazyVoxelCat = dynamic(() => import('../voxelcat'), {
   ssr: false,
@@ -21,6 +22,7 @@ const Main = ({ children, router }) => {
       <Container maxW="container.md" pt={14} >
         {/*<LazyVoxelCat />*/}
         {children}
+        <Footer />
       </Container>
     </Box>
   )
