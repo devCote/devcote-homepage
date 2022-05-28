@@ -1,6 +1,10 @@
 node_modules
+next.config.js
 .next
 dist
 .vercel
 .env
+.env.local
 .trash
+.gitignore
+.*
