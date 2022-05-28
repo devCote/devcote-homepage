@@ -16,10 +16,12 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@fontsource/mr-de-haviland": "^4.5.9",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^6.3.3",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-hook-form": "^7.31.2",
     "three": "^0.140.2"
   },
   "devDependencies": {

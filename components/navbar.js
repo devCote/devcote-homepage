@@ -49,7 +49,7 @@ const Navbar = props => {
       position='fixed'
       as='nav'
       w='100%'
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      bg={useColorModeValue('#d1d1d140', '#20202380')}
       css={{ backdropFilter: 'blur(20px)' }}
       zIndex={1}
       {...props}>
@@ -77,7 +77,10 @@ const Navbar = props => {
             {lang ? 'Works' : "Проекты"}
           </LinkItem>
           <LinkItem href='/studies' path={path}>
-            {lang ? 'Case Studies' : "Учебные материалы"}
+            {lang ? 'Studies' : "Учебные материалы"}
+          </LinkItem>
+          <LinkItem href='/contact' path={path}>
+            {lang ? 'Contacts' : "Контакты"}
           </LinkItem>
         </Stack>
 
@@ -95,13 +98,16 @@ const Navbar = props => {
               />
               <MenuList backgroundColor={colorMode === 'dark' ? '#18181a' : '#f2eccf'}>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>{lang ? "About" : "Домашняя страница"}</MenuItem>
+                  <MenuItem as={Link}>{lang ? "Main" : "Домашняя страница"}</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>{lang ? "Works" : "Проекты"}</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>{lang ? "Posts" : "Учебные материалы"}</MenuItem>
+                <NextLink href="/studies" passHref>
+                  <MenuItem as={Link}>{lang ? "Studies" : "Учебные материалы"}</MenuItem>
+                </NextLink>
+                <NextLink href="/contact" passHref>
+                  <MenuItem as={Link}>{lang ? "Contacts" : "Контакты"}</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

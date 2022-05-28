@@ -19,33 +19,29 @@ const Home = () => {
     <Layout>
       <Container>
         <Box borderRadius={"md"}
-          bg={colorMode === 'dark' ? '#18181a' : '#f2eccf'}
+          bg={colorMode === 'dark' ? '#18181a' : '#f1f1f1'}
           p={3} mb={6} align="center" mt={'80px'}
           css={{ backdropFilter: 'blur(20px)' }}>
           {lang ? hello.en : hello.ru}
         </Box>
         <Box display={{ md: 'flex' }} mb={{ base: 4, md: 0 }}>
           <Box flexGrow={1} mb={6}>
-            <AnimationHeader delay={0.2} >
-              <Heading as='h1' fontSize={{ base: '46', sm: '66' }} variant="title">
-                Dmitry Bakhanenko
-              </Heading>
-              <Text mt={{ base: '0', sm: '-4' }} fontWeight='bold' align='right'>
-                {lang ? sign.en : sign.ru}
-              </Text>
-            </AnimationHeader>
+            <Heading as='h1' fontSize={{ base: '46', sm: '66' }} variant="title">
+              Dmitry Bakhanenko
+            </Heading>
+            <Text mt={{ base: '0', sm: '-4' }} fontWeight='bold' align='right'>
+              {lang ? sign.en : sign.ru}
+            </Text>
           </Box>
-          <AnimationHeader delay={0.2} initialPosition={300} rotate={180} >
-            <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}
-              align='center'>
-              <Image borderColor={"whiteAlpha.800"} borderWidth={2}
-                borderStyle='solid' maxWidth='100px'
-                display="inline-block" borderRadius='full'
-                src='/me.jpeg' alt="profile img" />
-            </Box>
-          </AnimationHeader>
+          <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }}
+            align='center'>
+            <Image borderColor={"whiteAlpha.800"} borderWidth={2}
+              borderStyle='solid' maxWidth='100px'
+              display="inline-block" borderRadius='full'
+              src='/me.jpeg' alt="profile img" />
+          </Box>
         </Box>
-        <Section delay={0.8} >
+        <Section delay={0.4} >
           <Heading as={'h3'} mt={{ base: '-40px', md: '0' }} variant='section-title'>
             {lang ? 'About' : 'Обо мне'}
           </Heading>
@@ -53,7 +49,7 @@ const Home = () => {
             {lang ? about.en : about.ru}
           </Text>
         </Section>
-        <Section delay={1.2} >
+        <Section delay={0.6} >
           <Box display={'flex'} justifyContent='space-between'>
             <Heading as={'h3'} variant='section-title'>
               {lang ? 'Tech' : 'Технологии'}
@@ -64,7 +60,7 @@ const Home = () => {
             <Icons setIconName={setIconName} />
           </Box>
         </Section>
-        <Section delay={1.6}>
+        <Section delay={0.8}>
           <Heading as="h3" variant="section-title">
             {lang ? "I" : "Я"} ♥
           </Heading>
@@ -147,7 +143,7 @@ const Home = () => {
           </Box>
         </Section>
       </Container >
-    </Layout>
+    </Layout >
   )
 }
 
