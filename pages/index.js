@@ -1,5 +1,5 @@
 import { Container, Box, Heading, Text, Image, useColorMode, Button, ListItem, Link, List, SimpleGrid, GridItem, } from '@chakra-ui/react'
-import { Section, AnimationHeader } from '../components/section'
+import { Section } from '../components/section'
 import { useLang } from '../lib/langContext'
 import { hello, sign, about, love } from '../lib/text'
 import Icons from '../components/teach-icons'
