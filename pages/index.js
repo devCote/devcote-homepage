@@ -19,14 +19,16 @@ const Home = () => {
     <Layout>
       <Container>
         <Box borderRadius={"md"}
-          bg={colorMode === 'dark' ? '#18181a' : '#f1f1f1'}
+          bg={'#653abc'}
           p={3} mb={6} align="center" mt={'80px'}
-          css={{ backdropFilter: 'blur(20px)' }}>
+          css={{ backdropFilter: 'blur(20px)' }} color='white'>
           {lang ? hello.en : hello.ru}
         </Box>
         <Box display={{ md: 'flex' }} mb={{ base: 4, md: 0 }}>
           <Box flexGrow={1} mb={6}>
-            <Heading as='h1' fontSize={{ base: '46', sm: '66' }} variant="title">
+            <Heading as='h1'
+              fontSize={{ base: '46', sm: '66' }}
+              variant="title">
               Dmitry Bakhanenko
             </Heading>
             <Text mt={{ base: '0', sm: '-4' }} fontWeight='bold' align='right'>
@@ -54,7 +56,7 @@ const Home = () => {
             <Heading as={'h3'} variant='section-title'>
               {lang ? 'Tech' : 'Технологии'}
             </Heading>
-            <Heading fontSize={30} textAlign={'center'} as={'h2'}>{iconName}</Heading>
+            <Heading fontSize={30} textAlign={'center'} as={'h2'} variant='primary-color'>{iconName}</Heading>
           </Box>
           <Box display='flex' justifyContent='space-between' flexWrap='wrap'>
             <Icons setIconName={setIconName} />
@@ -62,7 +64,7 @@ const Home = () => {
         </Section>
         <Section delay={0.8}>
           <Heading as="h3" variant="section-title">
-            {lang ? "I" : "Я"} ♥
+            {lang ? 'I ♥' : 'Я ♥'}
           </Heading>
           <Text px={{ base: 0, md: 0 }}>
             {lang ? love.en : love.ru}
@@ -70,7 +72,7 @@ const Home = () => {
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            On the web
+            {lang ? `On the web` : `В сети`}
           </Heading>
           <List>
             <ListItem>

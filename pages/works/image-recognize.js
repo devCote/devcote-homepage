@@ -13,47 +13,46 @@ import Layout from '../../components/layouts/article'
 
 const Work = () => (
   <Layout title="Inkdrop">
-    <Container>
+    <Container mt={6}>
       <Title>
-        Inkdrop <Badge>2016-</Badge>
+        Image-recognizer <Badge>2020-</Badge>
       </Title>
+      <WorkImage src="/images/works/faceAnalyze2.png" alt="face-analyze image" />
       <P>
-        A Markdown note-taking app with 100+ plugins, cross-platform and
-        encrypted data sync support. The life-time revenue is more than $300k.
+        An image analyzing app using prediction model with neural network api, that can predict gender, age and race.
+        Moreover it can analyze what is shown at the photo, find face and do some celebrity recognition.
       </P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://www.inkdrop.app/">
-            https://www.inkdrop.app/ <ExternalLinkIcon mx="2px" />
+          <Link href="https://showmeyourface-23c01.web.app/" target='_blank'>
+            https://showmeyourface.web.app/ <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
           <Meta>Platform</Meta>
-          <span>Windows/macOS/Linux/iOS/Android</span>
+          <span>Google Firebase Web App</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>NodeJS, Electron, React Native</span>
+          <span>React, SASS, Tachyons, tsparticles, clarifai</span>
         </ListItem>
         <ListItem>
-          <Meta>Blogpost</Meta>
-          <Link href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820">
-            How I’ve Attracted The First 500 Paid Users For My SaaS That Costs
-            $5/mo <ExternalLinkIcon mx="2px" />
+          <Meta>Source Code</Meta>
+          <Link href='https://github.com/devCote/Show-Da-Face'>
+            Github Repository
+            <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/inkdrop_01.png" alt="Inkdrop" />
-      <WorkImage src="/images/works/inkdrop_02.png" alt="Inkdrop" />
-      <AspectRatio maxW="640px" ratio={1.7} my={4}>
+      <WorkImage src="/images/works/faceAnalyze1.png" alt="face-analyze image" />
+      <AspectRatio maxW="640px" ratio={1.59} my={4}>
         <iframe
-          src="https://www.youtube.com/embed/-qBavwqc_mY"
+          src="https://www.youtube.com/embed/FV38lSU3OPg"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
         ></iframe>
       </AspectRatio>
     </Container>

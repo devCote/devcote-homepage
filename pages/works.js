@@ -5,6 +5,7 @@ import { WorkGridItem } from '../components/grid-item'
 
 import typeReader from '../public/images/works/type_reader.png'
 import eshop from '../public/images/works/eshop.png'
+import imageRecognize from '../public/images/works/faceAnalyze1.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -25,8 +26,8 @@ const Works = () => (
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="inkdrop" title="inkdrop" thumbnail={eshop} >
-            Bla bla bla bla ...
+          <WorkGridItem id="image-recognize" title="image-recognize" thumbnail={imageRecognize} >
+            An image analyzing app using prediction model with neural network
           </WorkGridItem>
         </Section>
       </SimpleGrid>

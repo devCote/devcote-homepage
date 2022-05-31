@@ -26,6 +26,7 @@ export const LangToggle = () => {
           cursor="pointer"
           fontSize={22}
           transform='translate(0,2px)'
+          color='#875abc'
           ml={1.5}
         >{lang ? 'Ru' : 'En'}</Box>
       </motion.div>
