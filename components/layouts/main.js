@@ -17,6 +17,7 @@ const Main = ({ children, router }) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Bakhanenko Dmitriy Website</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
       </Head>
       <Navbar path={router.asPath} />
       <Container maxW="container.md" pt={14} >
