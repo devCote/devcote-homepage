@@ -16,18 +16,18 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="type-reader" title="Type Reader" thumbnail={typeReader} >
-            An app where you can try you skills in blind touch typing, supports all browsers
+          <WorkGridItem id="image-recognizer" title="Image Recognizer Platform" thumbnail={imageRecognize} >
+            An image analyzing app using prediction model with neural network
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="eshop" title="Eshop" thumbnail={eshop} >
+          <WorkGridItem id="eshop" title="Italy Fashion Online Shop" thumbnail={eshop} >
             Internet shop, where you can admin add/remove collections iteams dynamically
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="image-recognize" title="image-recognize" thumbnail={imageRecognize} >
-            An image analyzing app using prediction model with neural network
+          <WorkGridItem id="type-reader" title="Blind Tipe As Read" thumbnail={typeReader} >
+            An app where you can try you skills in blind touch typing, supports all browsers
           </WorkGridItem>
         </Section>
       </SimpleGrid>

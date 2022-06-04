@@ -11,14 +11,14 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const FormLayout = ({label, ...rest}) => {
+const FormLayout = ({ label, ...rest }) => {
 
-  const {colorMode} = useColorMode()
+  const { colorMode } = useColorMode()
 
   return (
-      <FormControl isRequired={rest.isRequired} mb={2}>
-        <FormLabel htmlFor={label}>{capitalizeFirstLetter(label)}</FormLabel>
-        {rest.textarea 
+    <FormControl isRequired={rest.isRequired} mb={2}>
+      <FormLabel htmlFor={label}>{capitalizeFirstLetter(label)}</FormLabel>
+      {rest.textarea
         ?
         <Textarea
           max={800}
@@ -26,20 +26,21 @@ const FormLayout = ({label, ...rest}) => {
           borderColor='gray.600'
           placeholder={label}
           name={label}
+          rows={7}
         />
         :
-        <Input 
+        <Input
           max={50}
           id={label}
           placeholder={label}
           borderColor='gray.600'
           name={label}
         />
-    }
-        <FormErrorMessage>
-          ERROR
-        </FormErrorMessage>
-      </FormControl>
+      }
+      <FormErrorMessage>
+        ERROR
+      </FormErrorMessage>
+    </FormControl>
   )
 }
 

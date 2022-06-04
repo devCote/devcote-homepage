@@ -1,25 +1,24 @@
-import { Container, Box, Heading, Text, Image, useColorMode, Button, ListItem, Link, List, SimpleGrid, GridItem, } from '@chakra-ui/react'
+import { Container, Box, Heading, Text, Image, useColorMode, Button, ListItem, Link, List } from '@chakra-ui/react'
 import { Section } from '../components/section'
 import { useLang } from '../lib/langContext'
 import { hello, sign, about, love } from '../lib/text'
 import Icons from '../components/teach-icons'
 import Layout from '../components/layouts/article'
 import { useState } from 'react'
-import { Iangular, Ibash, Igit, Inest, Ireact } from '../components/icons'
-import typeReader from '../public/images/works/type_reader.png'
+import { Igithub, Ilinkedin, Inest, Itwitter, Iweb } from '../components/icons'
 
 
 const Home = () => {
 
   const { lang } = useLang()
-  const { colorMode } = useColorMode()
+  //const { colorMode } = useColorMode()
   const [iconName, setIconName] = useState()
 
   return (
     <Layout>
       <Container>
         <Box borderRadius={"md"}
-          bg={'#653abc'}
+          bg={'teal'}
           p={3} mb={6} align="center" mt={'80px'}
           css={{ backdropFilter: 'blur(20px)' }} color='white'>
           {lang ? hello.en : hello.ru}
@@ -70,7 +69,7 @@ const Home = () => {
             {lang ? love.en : love.ru}
           </Text>
         </Section>
-        <Section delay={0.3}>
+        <Section delay={0.8}>
           <Heading as="h3" variant="section-title">
             {lang ? `On the web` : `В сети`}
           </Heading>
@@ -80,7 +79,7 @@ const Home = () => {
                 <Button
                   variant="ghost"
                   colorScheme="teal"
-                  leftIcon={<Ibash />}
+                  leftIcon={<Igithub />}
                 >
                   @devCote on github
                 </Button>
@@ -91,58 +90,35 @@ const Home = () => {
                 <Button
                   variant="ghost"
                   colorScheme="teal"
-                  leftIcon={<Ireact />}
+                  leftIcon={<Iweb />}
                 >
-                  @type-reader app
+                  @My Italy Fashion Shop
                 </Button>
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://twitter.com/craftzdog" target="_blank">
+              <Link href="https://twitter.com/DefCote" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
-                  leftIcon={<Iangular />}
+                  leftIcon={<Itwitter />}
                 >
-                  @craftzdog (日本語)
+                  @Twitter
                 </Button>
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://instagram.com/craftzdog" target="_blank">
+              <Link href="https://www.linkedin.com/in/dmitriy-bakhanenko-41a416150/" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
-                  leftIcon={<Igit />}
+                  leftIcon={<Ilinkedin />}
                 >
-                  @craftzdog
+                  @Linkedin
                 </Button>
               </Link>
             </ListItem>
           </List>
-
-          <SimpleGrid columns={[1, 2, 2]} gap={6}>
-            <GridItem
-              href="https://www.youtube.com/devaslife"
-              title="Dev as Life"
-              thumbnail={typeReader}
-            >
-              My YouTube channel (&gt;100k subs)
-            </GridItem>
-            <GridItem
-              href="https://www.inkdrop.app/"
-              title="Inkdrop"
-              thumbnail={typeReader}
-            >
-              A Markdown note-taking app
-            </GridItem>
-          </SimpleGrid>
-
-          <Box align="center" my={4}>
-            <Button rightIcon={<Inest />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </Box>
         </Section>
       </Container >
     </Layout >

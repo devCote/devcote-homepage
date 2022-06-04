@@ -26,23 +26,23 @@ const ContactMe = () => {
     e.preventDefault();
     setSenderName(e.target.name.value)
     setStatus(MESSAGE_STATUS.isSending)
-    
+
     //send email using emailjs
-    sendMessage(e.target).then(res => {
+    sendMessage(e.target).then(_res => {
       setStatus(MESSAGE_STATUS.sent)
-    }, err => {
-        setStatus(MESSAGE_STATUS.error)
-      })
-    
+    }, _err => {
+      setStatus(MESSAGE_STATUS.error)
+    })
+
   }
 
   switch (status) {
     case MESSAGE_STATUS.default:
       return (
         <form onSubmit={(e) => handleSubmit(e)}>
-            <FormLayout label={lang ? 'name' : 'имя'} isRequired />
-            <FormLayout label={lang ? 'email' : 'почта'} />
-            <FormLayout label={lang ? 'message' : 'сообщение'} textarea isRequired />
+          <FormLayout label={lang ? 'name' : 'имя'} isRequired />
+          <FormLayout label={lang ? 'email' : 'почта'} />
+          <FormLayout label={lang ? 'message' : 'сообщение'} textarea isRequired />
           <Button mt={4} colorScheme='teal' type='submit'>
             {lang ? 'Send' : 'Отправить'}
           </Button>
@@ -50,11 +50,11 @@ const ContactMe = () => {
       )
     case MESSAGE_STATUS.sent:
       return (
-          <>
+        <>
           <h1>{lang ? 'Thank you' : 'Спасибо'} {senderName}!</h1>
           <h1>{lang ? status : 'Ваше сообщение успешно отправлено'}</h1>
-          </>
-        )
+        </>
+      )
     case MESSAGE_STATUS.isSending:
       return <h1>{status}</h1>
     case MESSAGE_STATUS.error:
