@@ -15,7 +15,7 @@ import { works } from '../../lib/text'
 
 const Work = () => {
   const { lang } = useLang()
-  const { title, fullText } = works.eshop
+  const { title, text } = works.typeReader
   const { website, platform, stack, source } = works.breadcrumbs
 
   return (
@@ -26,9 +26,7 @@ const Work = () => {
         </Title>
         <WorkImage src="/images/works/eshop_items.png" alt="eshop image" />
         <P>
-          {lang ? fullText.en : fullText.ru}
-          An image analyzing app using prediction model with neural network api, that can predict gender, age and race.
-          Moreover it can analyze what is shown at the photo, find face and do some celebrity recognition.
+          {lang ? text.en : text.ru}
         </P>
         <List ml={4} my={4}>
           <ListItem>

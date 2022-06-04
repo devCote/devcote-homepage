@@ -16,8 +16,8 @@ const Main = ({ children, router }) => {
     <Box as="main" pb={12}  >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bakhanenko Dmitriy Website</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <title>Bakhanenko Dmitriy Website</title>
       </Head>
       <Navbar path={router.asPath} />
       <Container maxW="container.md" pt={14} >
