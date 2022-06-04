@@ -31,6 +31,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
         bg={active ? 'glassTiel' : undefined}
         color={active ? '#666666' : inactiveColor}
         target={target}
+        _focus={{ border: 'none' }}
         {...props}
       >
         {children}

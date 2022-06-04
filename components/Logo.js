@@ -28,7 +28,7 @@ const Logo = () => {
       <a>
         <LogoBox >
           <CatPaw color='#653abc' id='logo' boxSize={5} mb='2px' mr='-6px' />
-          <Text color={useColorModeValue('#653abc', 'whiteAlfa.900')}
+          <Text color={'whiteAlfa.900'}
             fontFamily='M PLUS Rounded 1c' fontWeight='bold' ml={3}>
             {lang === true ? 'Dmitry Bakhanenko' : 'Дмитрий Баханенко'}
           </Text>

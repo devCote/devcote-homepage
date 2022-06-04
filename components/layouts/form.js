@@ -4,7 +4,6 @@ import {
   FormErrorMessage,
   Input,
   Textarea,
-  useColorMode
 } from '@chakra-ui/react'
 
 function capitalizeFirstLetter(string) {
@@ -12,8 +11,6 @@ function capitalizeFirstLetter(string) {
 }
 
 const FormLayout = ({ label, ...rest }) => {
-
-  const { colorMode } = useColorMode()
 
   return (
     <FormControl isRequired={rest.isRequired} mb={2}>
@@ -27,6 +24,8 @@ const FormLayout = ({ label, ...rest }) => {
           placeholder={label}
           name={label}
           rows={7}
+          _focus={{ borderColor: "teal" }}
+          _hover={{ borderColor: "gray.700" }}
         />
         :
         <Input
@@ -35,6 +34,8 @@ const FormLayout = ({ label, ...rest }) => {
           placeholder={label}
           borderColor='gray.600'
           name={label}
+          _focus={{ borderColor: "teal" }}
+          _hover={{ borderColor: "gray.700" }}
         />
       }
       <FormErrorMessage>

@@ -55,10 +55,10 @@ const Home = () => {
             <Heading as={'h3'} variant='section-title'>
               {lang ? 'Tech' : 'Технологии'}
             </Heading>
-            <Heading fontSize={30} textAlign={'center'} as={'h2'} variant='primary-color'>{iconName}</Heading>
+            <Heading fontSize={30} textAlign={'center'} as={'h2'} color='teal'>{iconName}</Heading>
           </Box>
           <Box display='flex' justifyContent='space-between' flexWrap='wrap'>
-            <Icons setIconName={setIconName} />
+            <Icons color={'teal'} setIconName={setIconName} />
           </Box>
         </Section>
         <Section delay={0.8}>
