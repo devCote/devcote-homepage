@@ -55,7 +55,7 @@ const Work = () => {
         <WorkImage src="/images/works/eshop_pay.png" alt="eshop image" />
         <AspectRatio maxW="640px" ratio={1.59} my={4}>
           <iframe
-            src="https://www.youtube.com/embed/FV38lSU3OPg"
+            src=""
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

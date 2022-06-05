@@ -11,7 +11,7 @@ const Contact = () => {
     <Layout>
       <Container>
         <Heading as="h3" fontSize={30} mb={6} mt={6}>
-          {lang ? 'Send Me a Message' : 'Отправьте мне сообщение'}
+          {lang ? 'Drop Me a Message' : 'Отправьте мне сообщение'}
         </Heading>
         <Section>
           <ContactMe />
