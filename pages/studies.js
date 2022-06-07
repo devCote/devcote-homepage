@@ -1,10 +1,10 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import { Section } from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { StudyGridItem } from '../components/grid-item'
 
-import typeReader from '../public/images/works/type_reader.png'
-import eshop from '../public/images/works/eshop.png'
+import table from '../public/images/studies/table.png'
+import timer from '../public/images/studies/timer.png'
 
 const Studies = () => (
   <Layout title="Studies">
@@ -12,22 +12,16 @@ const Studies = () => (
       <Heading as="h3" fontSize={30} my={4}>
         Case Studies
       </Heading>
-
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="type-reader" title="Type Reader" thumbnail={typeReader} >
+          <StudyGridItem id="table" title="Dynamic Table" thumbnail={table} >
             An app where you can try you skills in blind touch typing, supports all browsers
-          </WorkGridItem>
+          </StudyGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="eshop" title="Eshop" thumbnail={eshop} >
+          <StudyGridItem id="timer" title="Stop Watch" thumbnail={timer} >
             Internet shop, where you can admin add/remove collections iteams dynamically
-          </WorkGridItem>
-        </Section>
-        <Section>
-          <WorkGridItem id="inkdrop" title="inkdrop" thumbnail={eshop} >
-            Bla bla bla bla ...
-          </WorkGridItem>
+          </StudyGridItem>
         </Section>
       </SimpleGrid>
     </Container>

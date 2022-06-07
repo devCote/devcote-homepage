@@ -12,7 +12,7 @@ import Layout from '../../components/layouts/article'
 import { useLang } from '../../lib/langContext'
 import { works } from '../../lib/text'
 
-const Work = () => {
+const Study = () => {
   const { lang } = useLang()
   const { title, text } = works.eshop
   const { website, platform, stack, source } = works.breadcrumbs
@@ -57,5 +57,5 @@ const Work = () => {
   )
 }
 
-export default Work
+export default Study
 export { getServerSideProps } from '../../components/chakra'

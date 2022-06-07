@@ -6,13 +6,13 @@ import {
   ListItem,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { Title, StudyImage, Meta } from '../../components/study'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import { useLang } from '../../lib/langContext'
 import { works } from '../../lib/text'
 
-const Work = () => {
+const Study = () => {
   const { lang } = useLang()
   const { title, text } = works.eshop
   const { website, platform, stack, source } = works.breadcrumbs
@@ -23,7 +23,7 @@ const Work = () => {
         <Title>
           {lang ? title.en : title.ru} <Badge>2021-</Badge>
         </Title>
-        <WorkImage src="/images/works/eshop_items.png" alt="eshop image" />
+        <StudyImage src="/images/works/eshop_items.png" alt="eshop image" />
         <P>
           {lang ? text.en : text.ru}
         </P>
@@ -51,11 +51,11 @@ const Work = () => {
           </ListItem>
         </List>
 
-        <WorkImage src="/images/works/eshop_pay.png" alt="eshop image" />
+        <StudyImage src="/images/works/eshop_pay.png" alt="eshop image" />
       </Container>
     </Layout>
   )
 }
 
-export default Work
+export default Study
 export { getServerSideProps } from '../../components/chakra'
