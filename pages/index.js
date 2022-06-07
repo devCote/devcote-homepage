@@ -1,17 +1,16 @@
-import { Container, Box, Heading, Text, Image, useColorMode, Button, ListItem, Link, List } from '@chakra-ui/react'
+import { Container, Box, Heading, Text, Image, Button, ListItem, Link, List } from '@chakra-ui/react'
 import { Section } from '../components/section'
 import { useLang } from '../lib/langContext'
 import { hello, sign, about, love } from '../lib/text'
 import Icons from '../components/teach-icons'
 import Layout from '../components/layouts/article'
 import { useState } from 'react'
-import { Igithub, Ilinkedin, Inest, Itwitter, Iweb } from '../components/icons'
+import { Igithub, Ilinkedin, Itwitter, Iweb } from '../components/icons'
 
 
 const Home = () => {
 
   const { lang } = useLang()
-  //const { colorMode } = useColorMode()
   const [iconName, setIconName] = useState()
 
   return (

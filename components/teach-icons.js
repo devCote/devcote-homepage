@@ -1,4 +1,4 @@
-import { Ireact, Iangular, Ijs, Inext, Iredux, Ihtml, Isass, Ichakra, Ipython, Iaws, Ifirebase, Imysql, Inode, Iredis, Iblender, Iadobe, Iunity, Ipostgress, Itailwind, Ibash, Ilinux, Ikubernetes, Inginx, Ivim, Inest, Igit } from '../components/icons'
+import { Ireact, Iangular, Ijs, Inext, Iredux, Ihtml, Isass, Ichakra, Ipython, Iaws, Ifirebase, Imysql, Inode, Iredis, Iblender, Iunity, Ipostgress, Itailwind, Ibash, Ilinux, Ikubernetes, Inginx, Inest, Igit } from '../components/icons'
 
 const TeachIcons = ({ setIconName, color }) => {
   return (

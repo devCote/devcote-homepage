@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Text, useColorModeValue } from "@chakra-ui/react"
+import { Text } from "@chakra-ui/react"
 import styled from '@emotion/styled'
 import { CatPaw } from './icons'
 import { useLang } from "../lib/langContext"
