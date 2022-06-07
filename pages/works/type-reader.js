@@ -53,14 +53,6 @@ const Work = () => {
         </List>
 
         <WorkImage src="/images/works/type_reader2.png" alt="typereader image" />
-        <AspectRatio maxW="640px" ratio={1.59} my={4}>
-          <iframe
-            src=""
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          ></iframe>
-        </AspectRatio>
       </Container>
     </Layout>
   )

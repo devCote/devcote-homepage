@@ -97,7 +97,7 @@ const Navbar = props => {
                 borderColor='currentColor'
                 aria-label="Options"
               />
-              <MenuList backgroundColor={colorMode === 'dark' ? '#18181a' : '#f2eccf'}>
+              <MenuList backgroundColor={colorMode === 'dark' ? '#18181a' : '#aad'}>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>{lang ? "Main" : "Домашняя страница"}</MenuItem>
                 </NextLink>

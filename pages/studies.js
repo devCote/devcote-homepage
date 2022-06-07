@@ -9,7 +9,7 @@ import eshop from '../public/images/works/eshop.png'
 const Studies = () => (
   <Layout title="Studies">
     <Container>
-      <Heading as="h3" fontSize={30} mb={4}>
+      <Heading as="h3" fontSize={30} my={4}>
         Case Studies
       </Heading>
 

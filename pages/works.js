@@ -8,6 +8,7 @@ import { useLang } from '../lib/langContext'
 import typeReader from '../public/images/works/type_reader.png'
 import eshop from '../public/images/works/eshop.png'
 import imageRecognize from '../public/images/works/faceAnalyze1.png'
+import starWars from '../public/images/works/starWars.png'
 
 const Works = () => {
 
@@ -16,11 +17,19 @@ const Works = () => {
   return (
     <Layout title="Works">
       <Container>
-        <Heading as="h3" fontSize={30} mb={4}>
+        <Heading as="h3" fontSize={30} my={4}>
           {lang ? 'Works' : 'Проекты'}
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section>
+            <WorkGridItem
+              id="type-reader"
+              title={lang ? works.typeReader.title.en : works.typeReader.title.ru}
+              thumbnail={typeReader} >
+              {lang ? works.typeReader.text.en : works.typeReader.text.ru}
+            </WorkGridItem>
+          </Section>
           <Section>
             <WorkGridItem
               id="image-recognizer"
@@ -39,10 +48,10 @@ const Works = () => {
           </Section>
           <Section>
             <WorkGridItem
-              id="type-reader"
-              title={lang ? works.typeReader.title.en : works.typeReader.title.ru}
-              thumbnail={typeReader} >
-              {lang ? works.typeReader.text.en : works.typeReader.text.ru}
+              id="starwars"
+              title={lang ? works.starWars.title.en : works.starWars.title.ru}
+              thumbnail={starWars} >
+              {lang ? works.starWars.text.en : works.starWars.text.ru}
             </WorkGridItem>
           </Section>
         </SimpleGrid>
