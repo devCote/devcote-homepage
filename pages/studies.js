@@ -2,31 +2,38 @@ import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import { Section } from '../components/section'
 import { StudyGridItem } from '../components/grid-item'
+import { works } from '../lib/text'
+import { useLang } from '../lib/langContext'
 
-import table from '../public/images/studies/table.png'
-import timer from '../public/images/studies/timer.png'
+import tableImg from '../public/images/studies/table.png'
+import timerImg from '../public/images/studies/timer.png'
 
-const Studies = () => (
-  <Layout title="Studies">
-    <Container>
-      <Heading as="h3" fontSize={30} my={4}>
-        Case Studies
-      </Heading>
-      <SimpleGrid columns={[1, 1, 2]} gap={6}>
-        <Section>
-          <StudyGridItem id="table" title="Dynamic Table" thumbnail={table} >
-            An app where you can try you skills in blind touch typing, supports all browsers
-          </StudyGridItem>
-        </Section>
-        <Section>
-          <StudyGridItem id="timer" title="Stop Watch" thumbnail={timer} >
-            Internet shop, where you can admin add/remove collections iteams dynamically
-          </StudyGridItem>
-        </Section>
-      </SimpleGrid>
-    </Container>
-  </Layout>
-)
+const Studies = () => {
+  const { lang } = useLang()
+  const { table, timer } = works
+
+  return (
+    <Layout title="Studies">
+      <Container>
+        <Heading as="h3" fontSize={30} my={4}>
+          {lang ? "Case Studies" : "Учебные материалы"}
+        </Heading>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section>
+            <StudyGridItem id="table" title={lang ? table.title.en : table.title.ru} thumbnail={tableImg} >
+              {lang ? table.text.en : table.text.ru}
+            </StudyGridItem>
+          </Section>
+          <Section>
+            <StudyGridItem id="timer" title={lang ? timer.title.en : timer.title.ru} thumbnail={timerImg} >
+              {lang ? timer.text.en : timer.text.ru}
+            </StudyGridItem>
+          </Section>
+        </SimpleGrid>
+      </Container>
+    </Layout>
+  )
+}
 
 export default Studies
 export { getServerSideProps } from '../components/chakra'

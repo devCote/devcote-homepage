@@ -6,7 +6,7 @@ import {
   ListItem,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { Title, StudyImage, Meta } from '../../components/study'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import { useLang } from '../../lib/langContext'
@@ -14,7 +14,7 @@ import { works } from '../../lib/text'
 
 const Study = () => {
   const { lang } = useLang()
-  const { title, text } = works.eshop
+  const { title, text } = works.timer
   const { website, platform, stack, source } = works.breadcrumbs
 
   return (
@@ -23,35 +23,33 @@ const Study = () => {
         <Title>
           {lang ? title.en : title.ru} <Badge>2021-</Badge>
         </Title>
-        <WorkImage src="/images/works/eshop_items.png" alt="eshop image" />
+        <StudyImage src="/images/works/timer.png" alt="timer image" />
         <P>
           {lang ? text.en : text.ru}
         </P>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>{lang ? website.en : website.ru}</Meta>
-            <Link href="https://italyshopnumberone.web.app/" target='_blank'>
-              https://italyshopnumberone.web.app/ <ExternalLinkIcon mx="2px" />
+            <Link href="https://timer-showcase.vercel.app/" target='_blank'>
+              https://timer-showcase.vercel.app/ <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>
             <Meta>{lang ? platform.en : platform.ru}</Meta>
-            <span>Google Firebase Web App + AWS server for message bot</span>
+            <span>Vercel</span>
           </ListItem>
           <ListItem>
             <Meta>{lang ? stack.en : stack.ru}</Meta>
-            <span>React, SASS, AWS, Redux, Redux-saga, typescript, firestore, firebase </span>
+            <span>Next, React, Chakra-ui</span>
           </ListItem>
           <ListItem>
             <Meta>{lang ? source.en : source.ru}</Meta>
-            <Link href='https://github.com/devCote/italyshopnumberone' target='_blank'>
+            <Link href='https://github.com/devCote/timer-showcase' target='_blank'>
               Github Repository
               <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
         </List>
-
-        <WorkImage src="/images/works/eshop_pay.png" alt="eshop image" />
       </Container>
     </Layout>
   )
